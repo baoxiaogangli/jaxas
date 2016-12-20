@@ -1,0 +1,11 @@
+
+
+
+select ename,job,dname,loc,sal
+ from( select row_number() 
+over(order by  sal   desc  )rn,
+  j.*£¬c.*from emp j,dept  c 
+WHERE 1=1 and j.deptno = c.deptno   ) 
+where rn >=6 and rn <=10
+
+
